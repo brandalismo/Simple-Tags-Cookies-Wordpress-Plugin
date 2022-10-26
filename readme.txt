@@ -17,7 +17,7 @@ Inserta de forma rápida y sencilla los tags de Facebook, Twitter, Linkedin, Pin
 = Características =
 * Integra la gestión de cookies de los tags habilitados.
 * Posibilidad de activar/desactivar cada plataforma y configurar los parámetros básicos.
-* Los tags de Facebook, Twitter, Pinterest y Google Analytics integran también el seguimiento de eventos avanzados para tiendas online con Woocommerce.
+* Los tags de Facebook, Twitter, Pinterest, Tik Tok y Google Analytics 4 integran también el seguimiento de eventos avanzados para tiendas online con Woocommerce.
 * Compatible con las versiones más recientes de Woocommerce +3.0.
 * Sencillo y fácil de configurar, en apenas unos segundos. 
 * Posibilidad de elegir entre ID de producto o SKU.
@@ -30,7 +30,6 @@ Inserta de forma rápida y sencilla los tags de Facebook, Twitter, Linkedin, Pin
 1. Puedes:
  * Subir la carpeta al directorio */wp-content/plugins/* vía FTP. 
  * Subir el archivo ZIP completo vía *Plugins -> Añadir nuevo -> Subir* en el Panel de Administración de tu instalación de WordPress.
- * Buscar **Simple Tags & Cookies** en el buscador disponible en *Plugins -> Añadir nuevo* y pulsar el botón *Instalar ahora*.
 2. Activar el plugin a través del menú *Plugins* en el Panel de Administración de WordPress.
 3. Configurar el plugin dentro de *Ajustes -> Simple Tags & Cookies*.
 4. ¡Eso es todo!
@@ -39,3 +38,6 @@ Inserta de forma rápida y sencilla los tags de Facebook, Twitter, Linkedin, Pin
 Visita nuestra página web <a href="https://www.labschool.es/configurar-pixel-de-seguimiento-de-facebook-twitter-linkedin-y-pinterest/" target="_blank">https://www.labschool.es/</a>
 
 == Changelog ==
+
+= Version 1.0.0 =
+* Initial release
