@@ -43,6 +43,9 @@ function simtagcoo_conf(){
 	$ga_bc	 	= $options['ga_bc'];
 	$ga_cp	 	= $options['ga_cp'];
 	$ga_pc	 	= $options['ga_pc'];
+	$go_id	 	= $options['go_id'];
+	$go_in	 	= $options['go_in'];
+	$go_js	 	= $options['go_js'];
 	$wo_sk		= $options['wo_sk'];	
 	$wo_tx		= $options['wo_tx'];
 	$ct_in		= $options['ct_in'];
@@ -84,7 +87,7 @@ function simtagcoo_conf(){
 		<span style="cursor:pointer" class="nav-tab" data-url="#linkedin"><?php esc_html_e('Linkedin','simple-tags-cookies'); ?></span>
 		<span style="cursor:pointer" class="nav-tab" data-url="#pinterest"><?php esc_html_e('Pinterest','simple-tags-cookies'); ?></span>
 		<span style="cursor:pointer" class="nav-tab" data-url="#tiktok"><?php esc_html_e('TikTok','simple-tags-cookies'); ?></span>
-		<span style="cursor:pointer" class="nav-tab" data-url="#google-analytics"><?php esc_html_e('Google Analytics','simple-tags-cookies'); ?></span>
+		<span style="cursor:pointer" class="nav-tab" data-url="#google"><?php esc_html_e('Google','simple-tags-cookies'); ?></span>
 		<?php if(class_exists('woocommerce')){ ?>
 		<span style="cursor:pointer" class="nav-tab" data-url="#woocommerce"><?php esc_html_e('Woocommerce','simple-tags-cookies'); ?></span>
 		<?php } ?>
@@ -678,8 +681,8 @@ function simtagcoo_conf(){
 					</tbody>
 				</table>
 			</div>		
-			<!-- GOOGLE ANALYTICS -->
-        	<div class="tab-pane" id="google-analytics">
+			<!-- GOOGLE -->
+        	<div class="tab-pane" id="google">
     			<table class="form-table">
       				<tbody>
 						<tr>
@@ -780,6 +783,60 @@ function simtagcoo_conf(){
 						<?php } ?>
       				</tbody>
     			</table>
+    			<table class="form-table">
+      				<tbody>
+						<tr>
+							<th colspan="2">
+								<h3><?php esc_html_e('Google Optimize', 'simple-tags-cookies');?></h3>
+								<hr>
+							</th>
+						</tr>
+						<tr>
+						  	<th scope="row"><?php esc_html_e('Identificador','simple-tags-cookies'); ?></th>
+						  	<td>
+						  		<fieldset>
+									<label for="go_id">
+										<input name='simtagcoo_options[go_id]' id='go_id' type='text' value='<?php echo $go_id; ?>' />
+										<p class="description">
+											<?php esc_html_e('Ayuda para obtener el identificador del tag de Google Optimize','simple-tags-cookies'); ?> 
+											<a href="https://support.google.com/optimize/answer/9204024" target="_blank" rel="noopener"> 
+											<?php esc_html_e('aquí.','simple-tags-cookies'); ?>
+											</a>
+										</p>
+									</label>
+								</fieldset>
+							</td>
+						</tr>
+						<tr>
+						  	<th scope="row"><?php esc_html_e('Activación','simple-tags-cookies'); ?></th>
+						  	<td>
+						  		<fieldset>
+									<label for="go_in">
+										<input name='simtagcoo_options[go_in]' id='go_in' type='checkbox' value='1' <?php echo checked($go_in,1,false); ?>/>
+										<?php esc_html_e('Activa esta opción para agregar el tag de Google Optimize.','simple-tags-cookies'); ?>
+									</label>
+								</fieldset>
+							</td>
+						</tr>
+						<tr>
+          					<th scope="row"><?php esc_html_e('Versión','simple-tags-cookies'); ?></th>
+          					<td>
+								<fieldset>
+									<label for="go_js">
+										<select name='simtagcoo_options[go_js]' id="go_js">
+											<option value='0' <?php echo selected($go_js,0,false); ?>><?php esc_html_e('Síncrona','simple-tags-cookies'); ?></option>
+											<option value='1' <?php echo selected($go_js,1,false); ?>><?php esc_html_e('Asíncrona','simple-tags-cookies'); ?></option>
+										</select>
+										<p class="description"><?php esc_html_e('Ayuda para elegir que versión de Google Optimize utilizar.','simple-tags-cookies'); ?>
+										<a href="https://support.google.com/optimize/answer/7513085" target="_blank" rel="noopener">
+										<?php esc_html_e('aquí.','simple-tags-cookies'); ?>
+										</a></p>
+									</label>
+								</fieldset>
+            				</td>
+        				</tr>
+					</tbody>
+				</table>
     		</div>
     		<!-- WOOCOMMERCE -->
 			<?php if(class_exists('woocommerce')){ ?>
@@ -871,6 +928,9 @@ function simtagcoo_validate($form){
 	$updated['ga_bc']	= $form['ga_bc'];
 	$updated['ga_cp']	= $form['ga_cp'];
 	$updated['ga_pc']	= $form['ga_pc'];
+	$updated['go_id']	= $form['go_id'];
+	$updated['go_in']	= $form['go_in'];
+	$updated['go_js']	= $form['go_js'];
 	$updated['wo_sk']	= $form['wo_sk'];	
 	$updated['wo_tx']	= $form['wo_tx'];
 	$updated['ct_in']	= $form['ct_in'];
