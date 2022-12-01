@@ -190,6 +190,9 @@ function simtagcoo_header() {
 	$ga_ac	 	= $options['ga_ac'];
 	$ga_bc	 	= $options['ga_bc'];
 	$ga_cp	 	= $options['ga_cp'];
+	$go_id	 	= $options['go_id'];
+	$go_in	 	= $options['go_in'];
+	$go_js	 	= $options['go_js'];
 	$ga_pc	 	= $options['ga_pc'];
 	$wo_sk		= $options['wo_sk'];	
 	$wo_tx		= $options['wo_tx'];
@@ -1034,11 +1037,22 @@ function simtagcoo_header() {
 		// INICIO COOKIES ANALITICA
 		if($cookies->analitica === 'true'){
 			
-		
 			// CUSTOM CON COOKIES
 			if ($ct_in == '1' && !empty($ct_ck)) { 
 				echo strip_tags($ct_ck, '<script>');
 			}
+		
+			// GOOGLE OPTIMIZE
+			if($go_in == '1'){ 
+				if($go_js == '1'){
+					$async = ' async ';
+				} else {
+					$async = ' ';
+				}
+				?>
+				<script<?php echo $async; ?>src="https://www.googleoptimize.com/optimize.js?id=<?php echo $go_id;?>"></script>
+				<?php
+			}		
 		
 			// GOOGLE ANALYTICS PAGEVIEW
 			if($ga_in == '1'){ 
