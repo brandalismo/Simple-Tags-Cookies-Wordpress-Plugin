@@ -51,22 +51,24 @@ function simtagcoo_frontend_scripts(){
 ?>
 <script>
 // COMPROBAR VALOR DE CHECKBOXES
-const analitica = document.getElementById('analitica');
-analitica.addEventListener('change', function() {
-	if(this.checked) {
-    	document.getElementById('analitica').value = 'true';
-	} else {
-		document.getElementById('analitica').value = 'false';
-	}
-});
-const marketing = document.getElementById('marketing');
-marketing.addEventListener('change', function() {
-	if(this.checked) {
-    	document.getElementById('marketing').value = 'true';
-	} else {
-		document.getElementById('marketing').value = 'false';
-	}
-});
+if(document.querySelector('.js-cookie-banner')){
+	const analitica = document.getElementById('analitica');
+	analitica.addEventListener('change', function() {
+		if(this.checked) {
+			document.getElementById('analitica').value = 'true';
+		} else {
+			document.getElementById('analitica').value = 'false';
+		}
+	});
+	const marketing = document.getElementById('marketing');
+	marketing.addEventListener('change', function() {
+		if(this.checked) {
+			document.getElementById('marketing').value = 'true';
+		} else {
+			document.getElementById('marketing').value = 'false';
+		}
+	});
+}
 // ACEPTAR COOKIES
 function accept() {
 	var value 		= {};
